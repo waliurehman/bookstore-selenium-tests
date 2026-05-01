@@ -18,13 +18,22 @@ public class BaseTest {
         
         // Chrome Options
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu");
         options.addArguments("--window-size=1920,1080");
         options.addArguments("--disable-blink-features=AutomationControlled");
         options.addArguments("--disable-extensions");
         options.addArguments("--disable-plugins");
+        options.addArguments("--disable-software-rasterizer");
+        options.addArguments("--disable-breakpad");
+        options.addArguments("--disable-default-apps");
+        options.addArguments("--disable-translate");
+        options.addArguments("--metrics-recording-only");
+        options.addArguments("--mute-audio");
+        options.addArguments("--no-first-run");
+        options.addArguments("--disable-background-timer-throttling");
         
         // Initialize WebDriver
         driver = new ChromeDriver(options);

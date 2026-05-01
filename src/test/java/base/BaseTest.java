@@ -30,6 +30,13 @@ public class BaseTest {
         // Initialize WebDriver
         driver = new ChromeDriver(options);
         
+        // Give Chrome time to fully initialize
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        
         // Set implicit wait and page load timeout
         driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(15));
         driver.manage().timeouts().pageLoadTimeout(java.time.Duration.ofSeconds(30));

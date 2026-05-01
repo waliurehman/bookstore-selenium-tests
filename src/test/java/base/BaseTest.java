@@ -31,7 +31,7 @@ public class BaseTest {
         
         // Give Chrome time to fully initialize (important on resource-constrained EC2)
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }

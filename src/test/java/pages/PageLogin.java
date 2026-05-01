@@ -48,7 +48,7 @@ public class PageLogin {
     // Constructor
     public PageLogin(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(40));  // Increased from 20s to accommodate page load delays
     }
 
     // Helper to safely send keys or fallback to JS when element is not interactable
@@ -100,9 +100,9 @@ public class PageLogin {
     public void clickLoginButton() {
         // First wait for button to be present, then clickable
         wait.until(ExpectedConditions.presenceOfElementLocated(loginButton));
-        // Small delay for React rendering
+        // Give React time to fully render
         try {
-            Thread.sleep(500);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }

@@ -29,7 +29,6 @@ public class BaseTest {
         
         // Initialize WebDriver
         driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
         
         // Set implicit wait and page load timeout
         driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(15));

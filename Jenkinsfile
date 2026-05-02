@@ -22,7 +22,7 @@ Build #${BUILD_NUMBER} - SUCCESS
 Tests: 15/15 Passed
 URL: ${BUILD_URL}
                 """,
-                to: "waliurehman4023@gmail.com"
+                to: "waliurehman4023@gmail.com, mahesararslan1998@gmail.com"
             )
         }
     }
